@@ -27,10 +27,10 @@ cd ..
 :Starter
 if exist %Name% (
 	del %Name%
-	echo java -Xmx%Maximum%M -Xms%Minimum%M -jar server.jar nogui >%Name%
+	echo java -Xmx%Maximum%M -Xms%Minimum%M -Dlog4j2.formatMsgNoLookups=true -jar server.jar nogui >%Name%
 	goto :Exiting
 ) else (
-	echo java -Xmx%Maximum%M -Xms%Minimum%M -jar server.jar nogui >%Name%
+	echo java -Xmx%Maximum%M -Xms%Minimum%M -Dlog4j2.formatMsgNoLookups=true -jar server.jar nogui >%Name%
 	goto :Exiting
 )
 
