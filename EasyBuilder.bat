@@ -22,17 +22,17 @@ if exist build\ (
 cd build
 curl -z BuildTools.jar -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 java -jar BuildTools.jar --rev %Version%
-ren spigot*.jar server.jar
-move server.jar ..
+ren spigot*.jar spigot-%Version%.jar
+move spigot-%Version%.jar ..
 cd ..
 
 :Starter
 if exist %Name% (
 	del %Name%
-	echo java -Xmx%Maximum%M -Xms%Minimum%M -Dlog4j2.formatMsgNoLookups=true -jar server.jar nogui >%Name%
+	echo java -Xmx%Maximum%M -Xms%Minimum%M -Dlog4j2.formatMsgNoLookups=true -jar spigot-%Version%.jar nogui >%Name%
 	goto :Exiting
 ) else (
-	echo java -Xmx%Maximum%M -Xms%Minimum%M -Dlog4j2.formatMsgNoLookups=true -jar server.jar nogui >%Name%
+	echo java -Xmx%Maximum%M -Xms%Minimum%M -Dlog4j2.formatMsgNoLookups=true -jar spigot-%Version%.jar nogui >%Name%
 	goto :Exiting
 )
 
