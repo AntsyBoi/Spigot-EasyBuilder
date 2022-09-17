@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Please make sure you have Java 17 installed before continuing."
+echo "Please make sure you have Java 17 installed and set as java in PATH before continuing."
 read -p "Press any key to continue ..."
 read -p "Enter the {version} you want to build (Default latest): " Version
 Version=$Version:-latest}
