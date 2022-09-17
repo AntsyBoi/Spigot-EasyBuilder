@@ -9,8 +9,19 @@ Simple solution to building the latest version of spigot.
 - Auto-generate startup bat files for your server
 - Easy version input 
 ## How to install
+
+### Method 1:
 1. Clone the repository
 2. Move "`EasyBuilder.bat`" for Windows systems, move "`EasyBuilder.sh`" for *nix based systems (Linux, MacOS, FreeBSD, OpenBSD) file from the repository to your servers root directory
+
+### Method 2:
+__**Caution: These methods will run the script from the current working directory so make sure you are in the right folder before proceeding**__ 
+
+For *nix systems run
+`sh -c "$(curl -fsSL https://github.com/AntsyBoi/Spigot-EasyBuilder/blob/main/EasyBuilder.sh)"`
+
+For Windows systems run
+`iwr -useb https://raw.githubusercontent.com/AntsyBoi/Spigot-EasyBuilder/main/EasyBuilder.bat|iex` in powershell
 
 And thats it!
 ## How to use
